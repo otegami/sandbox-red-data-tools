@@ -1,11 +1,33 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bigdecimal (3.1.2)
     csv (3.2.4)
+    extpp (0.1.0)
+    fiddle (1.1.0)
+    gio2 (3.5.1)
+      fiddle
+      gobject-introspection (= 3.5.1)
+    glib2 (3.5.1)
+      native-package-installer (>= 1.0.3)
+      pkg-config (>= 1.3.5)
+    gobject-introspection (3.5.1)
+      glib2 (= 3.5.1)
+    native-package-installer (1.1.5)
+    pkg-config (1.4.9)
+    red-arrow (9.0.0)
+      bigdecimal (>= 3.1.0)
+      extpp (>= 0.0.7)
+      gio2 (>= 3.5.0)
+      native-package-installer
+      pkg-config
     red-datasets (0.1.4)
       csv (>= 3.0.5)
       rexml
       rubyzip
+    red-datasets-arrow (0.0.3)
+      red-arrow
+      red-datasets (>= 0.0.3)
     rexml (3.2.5)
     rubyzip (2.3.2)
 
@@ -13,7 +35,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  red-arrow
   red-datasets
+  red-datasets-arrow
 
 BUNDLED WITH
    2.3.9
